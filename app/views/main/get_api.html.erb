@@ -1,0 +1,12 @@
+<div id="wrapper">
+  <h1>Your Interpretation Manifestation</h1>
+  <h3>Input State: <%= session[:input_state] %></h3>
+  <div id="emoji_area">
+    <p>Your state interpreted : </p>
+    <img src='<%= @emoji["#{session[:input_state]}"] %>' alt='emoji'/>
+    <form action="/back" method="post">
+      <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+      <button type="submit" name="back"><< back</button>
+    </form>
+  </div>
+</div>

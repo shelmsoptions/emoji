@@ -1,0 +1,14 @@
+<div id="wrapper">
+  <h2>Enter (type) your state or reaction or general action to describe either:</h2>
+  <h4>ex: joy, scream, blush, truck, roller_coaster</h4>
+  <%= flash[:error] %>
+  <form action="main#get_api" method="post">
+    <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+    <p>
+      <input type="text" name="mood_state">
+    </p>
+    <p>
+      <button type="submit" name="button">Interpret</button>
+    </p>
+  </form>
+</div>
